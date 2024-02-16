@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="https://www.bancoatlantida.com.sv/favicon.ico" />
+    <title>Generador XML/JSON</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Banco Atlántida, generador de archivos xml y json">
+
+    <!-- Referencia a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Referencia a archivo css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="logo col-md-6">
+                <!-- Contenido de la columna izquierda -->
+                <img src="https://www.bancoatlantida.com.sv/img/logo-bancatlan-b.png" class="logo-b" alt="bancatlan">
+            </div>
+            <div class="col-md-6">
+                <!-- Contenido de la columna derecha -->
+                <form>
+                    <div class="modal-body modal-dialog">
+                        <div class="container col-lg-12">
+                            <div class="modal-content col-lg-9">
+                                <form class="row g-2" id="formulario">
+                                    <!-- Título de formulario -->
+                                    <fieldset>
+                                        <legend>Generador de XML y JSON con JavaScript</legend>
+                                    </fieldset>
+
+                                    <!-- Campos de formulario -->
+                                    <div class="mb-3">
+                                        <label for="mascara" class="form-label">Máscara:</label>
+                                        <input type="text" class="form-control" placeholder="Ingresar máscara"
+                                            id="mascara">
+                                    </div> 
+                                    <div class="mb-3">
+                                        <label for="tipoDocumento" class="form-label">Tipo de documento:</label>
+                                        <input type="text" class="form-control" placeholder="Ingresar tipo de documento"
+                                            id="tipoDocumento">
+                                    </div>                                    
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-md-5">
+                                            <label for="numCliente" class="form-label">Número de cliente:</label>
+                                            <input type="number" class="form-control" placeholder="Número de cliente"
+                                                id="numCliente">
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="nombreCliente" class="form-label">Nombre:</label>
+                                            <input type="text" class="form-control" placeholder="Nombre de cliente"
+                                                id="nombreCliente">
+                                        </div>
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-md">
+                                            <label for="agencia" class="form-label">Agencia:</label>
+                                            <select class="form-select" id="agencia">
+                                                <option selected>-- Seleccionar --</option>
+                                                <option value="1">Agencia Centro Financiero</option>
+                                                <option value="2">Agencia C.C. Galerías</option>
+                                                <option value="3">Agencia Plaza Mundo</option>
+                                                <option value="4">Agencia Plaza Centro </option>
+                                                <option value="5">Agencia Masferrer</option>
+                                                <option value="6">Agencia La Mascota</option>
+                                                <option value="7">Agencia Cojutepeque</option>
+                                                <option value="8">Agencia Santa Rosa de Lima</option>
+                                                <option value="9">Agencia San Vicente</option>
+                                                <option value="10">Agencia Sensuntepeque</option>
+                                                <option value="11">Agencia La Capilla</option>
+                                                <option value="12">Agencia Chalchuapa</option>
+                                                <option value="13">Agencia Chalatenango</option>
+                                                <option value="14">Agencia San Miguel Centro</option>
+                                                <option value="15">Agencia Metrocentro Santa Ana</option>
+                                                <option value="16">Agencia Apopa</option>
+                                                <option value="17">Agencia Sonsonate</option>
+                                                <option value="18">Agencia Santa Elena</option>
+                                                <option value="19">Agencia Acajutla</option>
+                                                <option value="20">Agencia Santa Tecla</option>
+                                                <option value="21">Agencia Armenia</option>
+                                                <option value="22">Agencia Zacatecoluca</option>
+                                                <option value="23">Agencia Mejicanos</option>
+                                                <option value="24">Agencia Usulután</option>
+                                                <option value="25">Agencia San Francisco Gotera</option>
+                                                <option value="26">Agencia Surf City</option>
+                                                <option value="27">Agencia Ahuachapán</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label for="idAgencia" class="form-label">ID:</label>
+                                            <input type="number" class="form-control" placeholder="Id Agencia"
+                                                id="idAgencia" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-md">
+                                            <label for="nombreDocumento" class="form-label">Nombre de documento:</label>
+                                            <input type="text" class="form-control" placeholder="Nombre de documento"
+                                                id="nombreDocumento">
+                                        </div>                                       
+                                        <div class="col-md-5">
+                                            <label for="numDocumento" class="form-label">Número de documento:</label>
+                                            <input type="text" class="form-control" placeholder="Número documento"
+                                                id="numDocumento">
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-md">
+                                            <label for="fechaVigencia" class="form-label">Fecha de vigencia:</label>
+                                            <input type="date" class="form-control" id="fechaVigencia">
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="fechaExp" class="form-label">Fecha de expiración:</label>
+                                            <input type="date" class="form-control" id="fechaExp">
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="fechaDoc" class="form-label">Fecha documento:</label>
+                                            <input type="date" class="form-control" id="fechaDoc">
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="fechaArchivado" class="form-label">Fecha de archivado:</label>
+                                            <input type="datetime-local" class="form-control" id="fechaArchivado">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreArchivado" class="form-label">Archivado por:</label>
+                                        <input type="text" class="form-control" placeholder="Archivado por"
+                                            id="nombreArchivado">
+                                    </div> 
+                                    <div class="mb-3">
+                                        <label for="numCrediticio" class="form-label">Número crediticio:</label>
+                                        <input type="number" class="form-control" placeholder="Ingresar número crediticio"
+                                            id="numCrediticio">
+                                    </div>
+
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-9">
+                                            <!-- Buttons de descarga de archivos -->
+                                            <button type="button" class="btn btn-primary" id="descargarXML">Descargar XML</button>
+                                            <button type="button" class="btn btn-success" id="descargarJSON">Descargar JSON</button>
+                                        </div>
+                                        <div class="col-md">
+                                            <!-- Button de limpiar formulario -->
+                                            <button type="submit" class="btn btn-secondary" id="limpiar">Limpiar</button>
+                                        </div>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
