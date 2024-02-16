@@ -1,0 +1,27 @@
+body {
+    background-color: #d9272e;
+    margin-top: 50px;
+  }
+
+img.logo-b {
+    align-self: center;
+    vertical-align: middle;
+    width: 90%;
+  }
+
+.modal-content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.logo{
+  margin-top: 220px;
+}
+
+
+  
+
+  
+  
+  
