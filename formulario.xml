@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulario>
+    <mascara>DOC - EUC - Garantías</mascara>
+    <tipoDocumento>Detalle de Garantías de Cliente</tipoDocumento>
+    <numeroCliente>9876543241</numeroCliente>
+    <nombreCliente> Frank Óscar Padilla</nombreCliente>
+    <agencia>Agencia Plaza Centro </agencia>
+    <idAgencia>4</idAgencia>
+    <nombreDocumento>DUI/Frank Óscar Padilla</nombreDocumento>
+    <numeroDocumento>09876543-1 </numeroDocumento>
+    <fechaVigencia>2020-05-06</fechaVigencia>
+    <fechaExpiracion>2028-05-06</fechaExpiracion>
+    <fechaDocumento>2023-04-25</fechaDocumento>
+    <fechaArchivado>2023-12-26T13:11</fechaArchivado>
+    <nombreArchivado>Karina Cárcamo</nombreArchivado>
+    <numeroCrediticio>123456789</numeroCrediticio>
+</formulario>
